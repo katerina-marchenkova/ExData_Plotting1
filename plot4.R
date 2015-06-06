@@ -13,7 +13,7 @@ data$DateTime <- paste(data$Date, data$Time)
 data$DateTime <- strptime(data$DateTime, format="%d/%m/%Y%H:%M:%S", tz="UTC")
 
 #creates the plot
-png("plot4.png", width = 480, height = 480, units = "px")
+png("plot4.png", width = 480, height = 480, units = "px", bg = "transparent")
 par(mfrow=c(2,2))
 plot(data$DateTime, data$Global_active_power, type="l",ylab="Global Active Power", xlab="")
 plot(data$DateTime, data$Voltage, type="l",ylab="Voltage", xlab="datetime")

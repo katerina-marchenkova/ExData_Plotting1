@@ -10,7 +10,7 @@ subMetering$DateTime <- paste(subMetering$Date, subMetering$Time)
 subMetering$DateTime <- strptime(subMetering$DateTime, format="%d/%m/%Y%H:%M:%S", tz="UTC")
 
 #creates the plot
-png("plot3.png", width = 480, height = 480, units = "px")
+png("plot3.png", width = 480, height = 480, units = "px", bg = "transparent")
 plot(subMetering$DateTime, subMetering$Sub_metering_1, type="l", ylab="Energy sub metering", xlab="")
 lines(subMetering$DateTime, subMetering$Sub_metering_2, col="red")
 lines(subMetering$DateTime, subMetering$Sub_metering_3, col="blue")

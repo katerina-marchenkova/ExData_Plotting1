@@ -8,6 +8,6 @@ globalActivePowerByTime$DateTime <- paste(globalActivePowerByTime$Date, globalAc
 globalActivePowerByTime$DateTime <- strptime(globalActivePowerByTime$DateTime, format="%d/%m/%Y%H:%M:%S", tz="UTC")
 
 #creates the plot
-png("plot2.png", width = 480, height = 480, units = "px")
+png("plot2.png", width = 480, height = 480, units = "px", bg = "transparent")
 plot(globalActivePowerByTime$DateTime, globalActivePowerByTime$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
 dev.off()
