@@ -5,5 +5,5 @@ globalActivePower <- allData[(allData$Date== "1/2/2007" | allData$Date=="2/2/200
 globalActivePower <- as.numeric(globalActivePower)
 #creates the histogram
 png("plot1.png", width = 480, height = 480, units = "px")
-hist(globalActivePower, main="Global Active Power", col="red", xlab="Global Active Power (kilowatts)")
+hist(globalActivePower, main="Global Active Power", col="red", bg = "transparent", xlab="Global Active Power (kilowatts)")
 dev.off()
